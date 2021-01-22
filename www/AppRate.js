@@ -40,7 +40,7 @@ var AppRate = (function() {
 
   var LOCAL_STORAGE_COUNTER = 'counter';
 
-  var IS_IOS = /(iPhone|iPod|iPad)/i.test(navigator.userAgent.toLowerCase());
+  var IS_IOS = /(iPhone|iPod|iPad)/i.test(navigator.userAgent.toLowerCase()) || ((navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 0) || navigator.platform === 'iPad');
   var IS_ANDROID = /Android/i.test(navigator.userAgent.toLowerCase());
   var FLAG_NATIVE_CODE_SUPPORTED = IS_IOS || IS_ANDROID;
 
